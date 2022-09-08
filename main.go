@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/dhowden/tag"
-	"github.com/mitchellh/go-homedir"
 	"log"
 	"os"
+
+	"github.com/dhowden/tag"
+	"github.com/mitchellh/go-homedir"
 )
 
 type Song struct {
@@ -18,7 +19,7 @@ func main() {
 	if len(os.Args) > 1 {
 		songDir = os.Args[1]
 	} else {
-		songDir, err = homedir.Expand("~/Music/")
+		songDir, err = homedir.Expand("~/music/")
 		if err != nil {
 			log.Fatal("Can't open ~/Music directory")
 		}
